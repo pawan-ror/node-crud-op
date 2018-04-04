@@ -1,0 +1,50 @@
+<% layout('../layout') -%>
+  <h2>All Owners</h2>
+  <a href="/owners/create" class="btn btn-primary mb-5">Create New Owner</a>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+   
+      
+        <% owners.forEach(function (owner) { %>
+         <tr>
+            <td>
+                <%= owner.id %>  
+            </td> 
+            <td>
+                <%= owner.name %>  
+            </td> 
+            <td>
+                <%= owner.surname %>  
+            </td> 
+            <td>
+                <%= owner.address %>  
+            </td> 
+            <td>
+                <%= owner.phone %>  
+            </td>    
+            <td>
+               <a href="/owners/<%= owner.id %> " class="btn btn-success">
+                <i class="fa fa-pencil"></i>
+               </a>
+               <a href="/owners/delete/<%= owner.id %>" class="btn btn-danger">
+                <i class="fa fa-times"></i>
+                </a>
+            </td>   
+          </tr>
+                            
+        <% }) %>
+
+    </tbody>
+  </table>
+
+   

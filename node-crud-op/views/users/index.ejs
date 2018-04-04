@@ -1,0 +1,50 @@
+<% layout('../layout') -%>
+  <h2>All users</h2>
+  <a href="/users/create" class="btn btn-primary mb-5">Create New User</a>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Mobile</th>
+        <th>Email</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+   
+      
+        <% users.forEach(function (user) { %>
+         <tr>
+            <td>
+                <%= user.id %>  
+            </td> 
+            <td>
+                <%= user.name %>  
+            </td> 
+            <td>
+                <%= user.surname %>  
+            </td> 
+            <td>
+                <%= user.mobile %>  
+            </td> 
+            <td>
+                <%= user.email %>  
+            </td>    
+            <td>
+               <a href="/users/<%= user.id %> " class="btn btn-success">
+                <i class="fa fa-pencil"></i>
+               </a>
+               <a href="/users/delete/<%= user.id %>" class="btn btn-danger">
+                <i class="fa fa-times"></i>
+                </a>
+            </td>
+
+          </tr>                               
+        <% }) %>
+
+    </tbody>
+  </table>
+
+   

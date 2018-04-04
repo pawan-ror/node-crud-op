@@ -1,0 +1,26 @@
+<% layout('../layout') -%>
+<div class="row mt-5">
+	<div class="col-md-12 col-sm-12">
+		<form action="/owners/<%= owner.id %> " method="POST">
+		<input type="hidden" name="_method" value="put">
+		  <div class="form-group">
+		    <label for="name">Name:</label>
+		    <input name="name" class="form-control" id="name" value="<%= owner.name %> " required>
+		  </div>
+		  <div class="form-group">
+		    <label for="surname">Surname:</label>
+		    <input name="surname" class="form-control" id="surname" value="<%= owner.surname %> "  required>
+		  </div>
+		  <div class="form-group">
+		    <label for="address">Address:</label>
+		    <input name="address" class="form-control" id="address  " value="<%= owner.address %> ">
+		  </div>
+		  <div class="form-group">
+		    <label for="phone">Phone:</label>
+		    <input name="phone" type="text" class="form-control" id="phone" required value="<%= owner.phone %> " >
+		  </div>
+		  
+		  <button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
+</div>

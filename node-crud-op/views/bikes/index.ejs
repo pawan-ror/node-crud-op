@@ -1,0 +1,35 @@
+<% layout('../layout') -%>
+  <h2>All Bike</h2>
+  <a href="/bikes/create" class="btn btn-primary mb-5">Create New Bike</a>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Location</th>
+        
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+      <% bikes.forEach(function (bike) { %>
+      <tr>
+         <td><%= bike.id %>  <td>
+         <td><%= bike.name %>  <td>
+         <td><%= bike.location %>  <td>
+         <td>
+               <a href="/bikes/<%= bike.id %> " class="btn btn-success">
+                <i class="fa fa-pencil"></i>
+               </a>
+               <a href="/bikes/delete/<%= bike.id %>" class="btn btn-danger">
+                <i class="fa fa-times"></i>
+                </a>
+            </td>
+          </tr>   
+      <% }) %>
+      
+    </tbody>
+  </table>
+
+   

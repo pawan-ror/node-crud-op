@@ -1,0 +1,25 @@
+<% layout('../layout') -%>
+<div class="row mt-5">
+	<div class="col-md-12.col-sm-12">
+		<form action="/users/create" method="POST">
+		  <div class="form-group">
+		    <label for="name">Name:</label>
+		    <input name="name" class="form-control" id="name" required>
+		  </div>
+		  <div class="form-group">
+		    <label for="surname">Surname:</label>
+		    <input name="surname" class="form-control" id="surname" required>
+		  </div>
+		  <div class="form-group">
+		    <label for="mobile">Mobile:</label>
+		    <input name="mobile" class="form-control" id="mobile">
+		  </div>
+		  <div class="form-group">
+		    <label for="email">Email:</label>
+		    <input name="email" type="email" class="form-control" id="email" required>
+		  </div>
+		  
+		  <button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
+</div>

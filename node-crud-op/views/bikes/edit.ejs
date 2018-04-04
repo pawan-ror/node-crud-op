@@ -1,0 +1,19 @@
+<% layout('../layout') -%>
+<div class="row mt-5">
+	<div class="col-md-12.col-sm-12">
+		<form action="/bikes/<%= bike.id %> " method="POST">
+		<input type="hidden" name="_method" value="put">
+		  <div class="form-group">
+		    <label for="name">Name:</label>
+		    <input name="name" class="form-control" id="name" value="<%= bike.name %> " required>
+		  </div>
+		  <div class="form-group">
+		    <label for="surname">Location:</label>
+		    <input name="location" class="form-control" id="location" value="<%= bike.location %> "  required>
+		  </div>
+		 
+		  
+		  <button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
+</div>
